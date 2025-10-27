@@ -1,5 +1,7 @@
 # al-folio
 
+> **📸 Want to update your profile picture?** See [QUICK_START_MOBILE.md](QUICK_START_MOBILE.md) for easy mobile upload instructions!
+
 <div align="center">
 
 [![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
