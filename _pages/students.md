@@ -17,8 +17,13 @@ nav_order: 5
 ## PhD Students - Past Committees
 
 - Christiana McGrady (Georgetown, 2023)
-- [Lydia Felice](https://lydiafelice.github.io/) (Georgetown, 2022)
-- [Maya Barzilai](http://mayabarzilai.com/) (Georgetown, 2020)
+- Bertille Baron (Georgetown, 2023)
+- Amani Aloufi (Georgetown, 2022)
+- [Lydia Felice](https://sites.google.com/georgetown.edu/lydiafelice/home?authuser=1) (Georgetown, 2022)
+- [Maya Barzilai](https://sites.google.com/georgetown.edu/mayalbarzilai) (Georgetown, 2020)
+- Lindley Winchester (Georgetown, 2019)
+- [Jahurul Islam](https://linguistics.ubc.ca/profile/jahurul-islam/) (Georgetown, 2019)
+- Stacy Petersen (Georgetown, 2018)
 
 ## Undergraduate Theses
 
