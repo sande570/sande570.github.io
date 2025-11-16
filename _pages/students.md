@@ -28,5 +28,6 @@ nav_order: 5
 
 ## Undergraduate Theses
 
-- Chelsea Tang (Berkeley '22, current PhD student at MIT)
-- Katherine Russell (Georgetown '20, current PhD student at UC Berkeley)
+- Lindsay Hatch (Berkeley '25)
+- Chelsea Tang (Berkeley '22, PhD student at MIT)
+- Katherine Russell (Georgetown '20, PhD student at UC Berkeley)
