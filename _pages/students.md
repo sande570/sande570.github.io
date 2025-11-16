@@ -11,7 +11,7 @@ nav_order: 5
 - [Katherine Russell](https://www.krrussell.com/) (Berkeley)
 - [Zachary Wellstood](https://zachwellstood.com/) (Berkeley)
 - [Becky Everson](https://rebeccaeverson.github.io/) (Berkeley)
-- [Alice Lee-Kleinberg]([https://rebeccaeverson.github.io/](https://lx.berkeley.edu/people/alice-lee-kleinberg) (Berkeley)
+- [Alice Lee-Kleinberg](https://lx.berkeley.edu/people/alice-lee-kleinberg) (Berkeley)
 
 ## PhD Students - Past Committees
 
