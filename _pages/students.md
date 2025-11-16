@@ -8,14 +8,15 @@ nav_order: 5
 ---
 
 ## PhD Students - Current Advisees
-
-- [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley)
-- [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley)
 - [Katherine Russell](https://www.krrussell.com/) (Berkeley)
 - [Zachary Wellstood](https://zachwellstood.com/) (Berkeley)
+- [Becky Everson](https://rebeccaeverson.github.io/) (Berkeley)
+- [Alice Lee-Kleinberg]([https://rebeccaeverson.github.io/](https://lx.berkeley.edu/people/alice-lee-kleinberg) (Berkeley)
 
 ## PhD Students - Past Committees
 
+- [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley)
+- [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley)
 - Christiana McGrady (Georgetown, 2023)
 - Bertille Baron (Georgetown, 2023)
 - Amani Aloufi (Georgetown, 2022)
