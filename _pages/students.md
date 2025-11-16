@@ -15,13 +15,13 @@ nav_order: 5
 
 ## PhD Students - Past Committees
 
-- [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley)
-- [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley)
+- [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley, advisor)
+- [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley, advisor)
 - Christiana McGrady (Georgetown, 2023)
 - Bertille Baron (Georgetown, 2023)
 - Amani Aloufi (Georgetown, 2022)
 - [Lydia Felice](https://sites.google.com/georgetown.edu/lydiafelice/home?authuser=1) (Georgetown, 2022)
-- [Maya Barzilai](https://sites.google.com/georgetown.edu/mayalbarzilai) (Georgetown, 2020)
+- [Maya Barzilai](https://sites.google.com/georgetown.edu/mayalbarzilai) (Georgetown, 2020, co-advisor)
 - Lindley Winchester (Georgetown, 2019)
 - [Jahurul Islam](https://linguistics.ubc.ca/profile/jahurul-islam/) (Georgetown, 2019)
 - Stacy Petersen (Georgetown, 2018)
