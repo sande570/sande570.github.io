@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Areal Linguistic Features of Africa
-img: assets/img/stamp.png
+img: assets/img/STAMP_Map_BigImperfective_202406.png
 importance: 4
 category: areal
 ---
