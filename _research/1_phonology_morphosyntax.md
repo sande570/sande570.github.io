@@ -1,8 +1,7 @@
 ---
 layout: page
 title: The interaction of Phonology with Morphosyntax
-description: Exploring the extent to which phonology interacts with morphology and syntax
-img:
+img: assets/img/cbp.png
 importance: 1
 category: theoretical
 ---

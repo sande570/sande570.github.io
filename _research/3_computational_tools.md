@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Computational tools for Language Documentation
-description: Creating online database structures useful for linguistic fieldwork
-img:
+img: assets/img/twisted-tongues.png
 importance: 3
 category: computational
 ---
