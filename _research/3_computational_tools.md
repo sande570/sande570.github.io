@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computational tools for Language Documentation
-img:
+img: assets/img/twisted-tongues.png
 importance: 3
 category: computational
 ---

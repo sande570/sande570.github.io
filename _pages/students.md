@@ -7,6 +7,9 @@ nav: true
 nav_order: 5
 ---
 
+<div class="row">
+<div class="col-md-7" markdown="1">
+
 ## PhD Students - Current Advisees
 - [Katherine Russell](https://www.krrussell.com/) (Berkeley)
 - [Zachary Wellstood](https://zachwellstood.com/) (Berkeley)
@@ -33,3 +36,14 @@ nav_order: 5
 - Lindsay Hatch (Berkeley '25)
 - Chelsea Tang (Berkeley '22, PhD student at MIT)
 - Katherine Russell (Georgetown '20, PhD student at UC Berkeley)
+
+</div>
+
+<div class="col-md-5">
+<img src="/assets/img/Students1.jpg" alt="Students" class="img-fluid rounded z-depth-1 mb-3">
+<img src="/assets/img/Students2.jpg" alt="Students" class="img-fluid rounded z-depth-1 mb-3">
+<img src="/assets/img/Students3.jpg" alt="Students" class="img-fluid rounded z-depth-1 mb-3">
+<img src="/assets/img/Benin.jpg" alt="African Linguistics School Benin" class="img-fluid rounded z-depth-1 mb-3">
+</div>
+
+</div>

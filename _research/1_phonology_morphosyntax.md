@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The interaction of Phonology with Morphosyntax
-img:
+img: assets/img/cbp.png
 importance: 1
 category: theoretical
 ---
