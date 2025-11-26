@@ -2,7 +2,7 @@
 layout: page
 title: Computational tools for Language Documentation
 description: Creating online database structures useful for linguistic fieldwork
-img:
+img: assets/img/Benin.jpg
 importance: 3
 category: computational
 ---

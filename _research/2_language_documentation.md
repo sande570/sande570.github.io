@@ -2,7 +2,7 @@
 layout: page
 title: Language documentation in Côte d'Ivoire
 description: Documenting and describing the grammar of understudied Ivorian languages
-img:
+img: assets/img/Gnagbodougnoa.JPG
 importance: 2
 category: fieldwork
 ---
