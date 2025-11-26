@@ -2,7 +2,7 @@
 layout: page
 title: Areal Linguistic Features of Africa
 description: Mapping the distribution of linguistic features across Africa
-img: assets/img/NigeriaGirls.jpg
+img:
 importance: 4
 category: areal
 ---
