@@ -14,7 +14,7 @@ services:
     #     USERNAME: # echo $USER
     command: bash -c "bundle install && bash /srv/jekyll/bin/entry_point.sh"
     ports:
-      - 8080:8080
+      - 8187:8080
       - 35729:35729
     volumes:
       - .:/srv/jekyll
