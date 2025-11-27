@@ -46,7 +46,7 @@ jobs:
       - name: Build site (without image conversion)
         run: |
           # Disable jekyll-imagemagick plugin for CI (we handle it separately with caching)
-          sed -i 's/imagemagick:/imagemagick:\n  enabled: false  # disabled for CI/' _config.yml
+          sed -i 's/enabled: true # enables responsive/enabled: false # disabled for CI, enables responsive/' _config.yml
           export JEKYLL_ENV=production
           bundle exec jekyll build
 
