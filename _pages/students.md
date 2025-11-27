@@ -40,10 +40,10 @@ nav_order: 5
 </div>
 
 <div class="col-md-5">
-<img src="/assets/img/Students1.jpg" alt="Students" class="img-fluid rounded z-depth-1 mb-3">
-<img src="/assets/img/Students2.jpg" alt="Students" class="img-fluid rounded z-depth-1 mb-3">
-<img src="/assets/img/Students3.jpg" alt="Students" class="img-fluid rounded z-depth-1 mb-3">
-<img src="/assets/img/Benin.jpg" alt="African Linguistics School Benin" class="img-fluid rounded z-depth-1 mb-3">
+{% include figure.liquid loading="eager" path="assets/img/Students1.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 1" caption="TODO: caption text 1" %}
+{% include figure.liquid loading="eager" path="assets/img/Students2.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 2" caption="TODO: caption text 2" %}
+{% include figure.liquid loading="eager" path="assets/img/Students3.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 3" caption="TODO: caption text 3" %}
+{% include figure.liquid loading="eager" path="assets/img/Benin.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 4" caption="TODO: caption text 4" %}
 </div>
 
 </div>

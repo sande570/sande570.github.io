@@ -6,7 +6,11 @@
   {% if include.slot %}
     slot="{{ include.slot }}"
   {% endif %}
+  {% if include['figure-class'] %}
+    class="{{ include['figure-class'] }}"
+  {% endif %}
 >
+  {% if include['aspect-ratio'] %}<div style="aspect-ratio: {{ include['aspect-ratio'] }}; overflow: hidden;">{% endif %}
   <picture>
     <!-- Auto scaling with imagemagick -->
     <!--
@@ -46,19 +50,30 @@
       {% else %}
         height="auto"
       {% endif %}
-      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
+      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] or include['object-fit'] or include['aspect-ratio'] or include['object-position'] %}
         style="
           {% if include['min-width'] %}
-            min-width: {{ include.min-width }};
+            min-width: {{ include['min-width'] }};
           {% endif %}
           {% if include['min-height'] %}
-            min-height: {{ include.min-height }};
+            min-height: {{ include['min-height'] }};
           {% endif %}
           {% if include['max-width'] %}
-            max-width: {{ include.max-width }};
+            max-width: {{ include['max-width'] }};
           {% endif %}
           {% if include['max-height'] %}
-            max-height: {{ include.max-height }};
+            max-height: {{ include['max-height'] }};
+          {% endif %}
+          {% if include['object-fit'] %}
+            object-fit: {{ include['object-fit'] }};
+          {% elsif include['aspect-ratio'] %}
+            object-fit: cover;
+          {% endif %}
+          {% if include['object-position'] %}
+            object-position: {{ include['object-position'] }};
+          {% endif %}
+          {% if include['aspect-ratio'] %}
+            width: 100%; height: 100%;
           {% endif %}
         "
       {% endif %}
@@ -79,6 +94,7 @@
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     >
   </picture>
+  {% if include['aspect-ratio'] %}</div>{% endif %}
 
   {% if include.caption %}
     <figcaption class="caption">{{ include.caption }}</figcaption>
