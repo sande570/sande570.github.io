@@ -18,6 +18,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Cache converted images
+        uses: actions/cache@v4
+        with:
+          path: .image-cache
+          key: images-${{ hashFiles('assets/img/**') }}
+          restore-keys: |
+            images-
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -30,12 +38,21 @@ jobs:
           python-version: "3.13"
           cache: "pip"
 
-      - name: Install and Build
+      - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
+
+      - name: Build site (without image conversion)
+        run: |
+          # Disable jekyll-imagemagick plugin for CI (we handle it separately with caching)
+          sed -i 's/imagemagick:/imagemagick:\n  enabled: false  # disabled for CI/' _config.yml
           export JEKYLL_ENV=production
           bundle exec jekyll build
+
+      - name: Convert images (cached)
+        run: |
+          ./bin/convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400"
 
       - name: Purge unused CSS
         run: |
