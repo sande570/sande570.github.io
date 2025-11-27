@@ -11,13 +11,13 @@ I am a linguistics faculty member at UC Berkeley, where I started in January 202
 
 <div class="row mt-4 mb-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/myfamily.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" %}
+        {% include figure.liquid loading="eager" path="assets/img/myfamily.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Siblings.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" %}
+        {% include figure.liquid loading="eager" path="assets/img/Siblings.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Berkeley.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" %}
+        {% include figure.liquid loading="eager" path="assets/img/Berkeley.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
 </div>
 
@@ -25,13 +25,13 @@ I typically spend my summers in West Africa, where I carry out linguistic fieldw
 
 <div class="row mt-4 mb-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/aboutme.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" %}
+        {% include figure.liquid loading="eager" path="assets/img/aboutme.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/NigeriaGirls.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" %}
+        {% include figure.liquid loading="eager" path="assets/img/NigeriaGirls.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Atieke.JPG" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" %}
+        {% include figure.liquid loading="eager" path="assets/img/Atieke.JPG" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
 </div>
 
@@ -39,12 +39,12 @@ In my free time I enjoy hiking, climbing, gluten-free baking, and playing board 
 
 <div class="row mt-4 mb-4">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Bouldering.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/4" %}
+        {% include figure.liquid loading="eager" path="assets/img/Bouldering.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/4" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/hats5.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/4" %}
+        {% include figure.liquid loading="eager" path="assets/img/hats5.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/4" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/hatsnew2.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/4" %}
+        {% include figure.liquid loading="eager" path="assets/img/hatsnew2.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/4" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
 </div>

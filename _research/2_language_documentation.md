@@ -10,13 +10,13 @@ Much of my theoretical research relies on data collected through fieldwork abroa
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Fieldwork.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 1" caption="TODO: caption text 1" %}
+        {% include figure.liquid loading="eager" path="assets/img/Fieldwork.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 1" caption="TODO: caption text 1" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gnagbodougnoa.JPG" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 2" caption="TODO: caption text 2" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gnagbodougnoa.JPG" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 2" caption="TODO: caption text 2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FieldTeam.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 3" caption="TODO: caption text 3" %}
+        {% include figure.liquid loading="eager" path="assets/img/FieldTeam.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 3" caption="TODO: caption text 3" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
 </div>
 
