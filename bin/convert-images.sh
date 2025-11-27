@@ -32,17 +32,11 @@ convert_image() {
     # Track this file as used
     echo "$cached_file" >> "$USED_FILES"
 
-    # Check cache hit
-    if [[ -f "$cached_file" ]]; then
-        # Validate it's a real webp
-        if file "$cached_file" | grep -q "RIFF.*WEBP"; then
-            echo "  [cache hit] ${name}-${width}.webp"
-            cp "$cached_file" "$output_file"
-            return 0
-        else
-            echo "  [invalid cache] ${name}-${width}.webp"
-            rm -f "$cached_file"
-        fi
+    # Check cache hit (trust non-empty files since we control the cache)
+    if [[ -s "$cached_file" ]]; then
+        echo "  [cache hit] ${name}-${width}.webp"
+        cp "$cached_file" "$output_file"
+        return 0
     fi
 
     # Cache miss - convert
