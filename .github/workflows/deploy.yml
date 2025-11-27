@@ -39,9 +39,7 @@ jobs:
           cache: "pip"
 
       - name: Install dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+        run: pip3 install --upgrade nbconvert
 
       - name: Build site (without image conversion)
         run: |
@@ -49,6 +47,16 @@ jobs:
           sed -i 's/enabled: true # enables responsive/enabled: false # disabled for CI, enables responsive/' _config.yml
           export JEKYLL_ENV=production
           bundle exec jekyll build
+
+      - name: Check if image conversion needed
+        id: check-images
+        run: |
+          CLEANUP=${{ github.ref_name == 'main' && 'true' || 'false' }}
+          ./bin/convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400" 85 "$CLEANUP" true || echo "needs_conversion=true" >> $GITHUB_OUTPUT
+
+      - name: Install ImageMagick (only if needed)
+        if: steps.check-images.outputs.needs_conversion == 'true'
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
 
       - name: Convert images (cached)
         run: |

@@ -1,21 +1,26 @@
 #!/bin/bash
 set -euo pipefail
 
-# Usage: ./convert-images.sh <input_dir> <cache_dir> <output_dir> <widths> [quality] [cleanup:true/false]
-# Example: ./convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400" 85 true
+# Usage: ./convert-images.sh <input_dir> <cache_dir> <output_dir> <widths> [quality] [cleanup:true/false] [check-only:true/false]
+# Example: ./convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400" 85 true false
+# check-only mode: returns exit code 0 if all cached, 2 if conversion needed
 
-INPUT_DIR="${1:?Usage: $0 <input_dir> <cache_dir> <output_dir> <widths> [quality] [cleanup]}"
+INPUT_DIR="${1:?Usage: $0 <input_dir> <cache_dir> <output_dir> <widths> [quality] [cleanup] [check-only]}"
 CACHE_DIR="${2:?}"
 OUTPUT_DIR="${3:?}"
 WIDTHS="${4:-480 800 1400}"
 QUALITY="${5:-85}"
 CLEANUP="${6:-false}"
+CHECK_ONLY="${7:-false}"
 
 mkdir -p "$CACHE_DIR" "$OUTPUT_DIR"
 
 # Track used cache files for cleanup
 USED_FILES=$(mktemp)
 trap "rm -f $USED_FILES" EXIT
+
+# Track if any conversion is needed
+NEEDS_CONVERSION=false
 
 convert_image() {
     local src="$1"
@@ -35,11 +40,19 @@ convert_image() {
     # Check cache hit (trust non-empty files since we control the cache)
     if [[ -s "$cached_file" ]]; then
         echo "  [cache hit] ${name}-${width}.webp"
-        cp "$cached_file" "$output_file"
+        [[ "$CHECK_ONLY" != "true" ]] && cp "$cached_file" "$output_file"
         return 0
     fi
 
-    # Cache miss - convert
+    # Cache miss
+    NEEDS_CONVERSION=true
+
+    if [[ "$CHECK_ONLY" == "true" ]]; then
+        echo "  [needs conversion] ${name}-${width}.webp"
+        return 0
+    fi
+
+    # Convert
     echo "  [converting] ${name}-${width}.webp"
     local tmp_file=$(mktemp)
     if convert "$src" -resize "${width}x>" -quality "$QUALITY" "$tmp_file.webp"; then
@@ -82,6 +95,17 @@ for src in "$INPUT_DIR"/*.{jpg,jpeg,png,tiff,gif}; do
         convert_image "$src" "$width"
     done
 done
+
+# In check-only mode, exit with code 2 if conversion needed
+if [[ "$CHECK_ONLY" == "true" ]]; then
+    if [[ "$NEEDS_CONVERSION" == "true" ]]; then
+        echo "Conversion needed"
+        exit 2
+    else
+        echo "All images cached"
+        exit 0
+    fi
+fi
 
 # Cleanup old cache entries if requested (only on main branch)
 if [[ "$CLEANUP" == "true" ]]; then
