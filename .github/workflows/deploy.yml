@@ -18,6 +18,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Cache converted images
+        uses: actions/cache@v4
+        with:
+          path: .image-cache
+          key: images-${{ hashFiles('assets/img/**') }}
+          restore-keys: |
+            images-
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -30,12 +38,30 @@ jobs:
           python-version: "3.13"
           cache: "pip"
 
-      - name: Install and Build
+      - name: Install dependencies
+        run: pip3 install --upgrade nbconvert
+
+      - name: Build site (without image conversion)
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          # Disable jekyll-imagemagick plugin for CI (we handle it separately with caching)
+          sed -i 's/enabled: true # enables responsive/enabled: false # disabled for CI, enables responsive/' _config.yml
           export JEKYLL_ENV=production
           bundle exec jekyll build
+
+      - name: Check if image conversion needed
+        id: check-images
+        run: |
+          CLEANUP=${{ github.ref_name == 'main' && 'true' || 'false' }}
+          ./bin/convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400" 85 "$CLEANUP" true || echo "needs_conversion=true" >> $GITHUB_OUTPUT
+
+      - name: Install ImageMagick (only if needed)
+        if: steps.check-images.outputs.needs_conversion == 'true'
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Convert images (cached)
+        run: |
+          CLEANUP=${{ github.ref_name == 'main' && 'true' || 'false' }}
+          ./bin/convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400" 85 "$CLEANUP"
 
       - name: Purge unused CSS
         run: |
@@ -55,7 +81,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const branch = context.ref.replace('refs/heads/', '');
+            const branch = context.ref.replace('refs/heads/', '').replace(/_/g, '-');
             const deployUrl = `https://${branch}.${{ secrets.CLOUDFLARE_PROJECT_NAME }}.pages.dev`;
 
             // Find PRs for this branch
