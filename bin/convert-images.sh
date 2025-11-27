@@ -1,16 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
-# Usage: ./convert-images.sh <input_dir> <cache_dir> <output_dir> <widths>
-# Example: ./convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400"
+# Usage: ./convert-images.sh <input_dir> <cache_dir> <output_dir> <widths> [quality] [cleanup:true/false]
+# Example: ./convert-images.sh assets/img .image-cache _site/assets/img "480 800 1400" 85 true
 
-INPUT_DIR="${1:?Usage: $0 <input_dir> <cache_dir> <output_dir> <widths>}"
+INPUT_DIR="${1:?Usage: $0 <input_dir> <cache_dir> <output_dir> <widths> [quality] [cleanup]}"
 CACHE_DIR="${2:?}"
 OUTPUT_DIR="${3:?}"
 WIDTHS="${4:-480 800 1400}"
 QUALITY="${5:-85}"
+CLEANUP="${6:-false}"
 
 mkdir -p "$CACHE_DIR" "$OUTPUT_DIR"
+
+# Track used cache files for cleanup
+USED_FILES=$(mktemp)
+trap "rm -f $USED_FILES" EXIT
 
 convert_image() {
     local src="$1"
@@ -23,6 +28,9 @@ convert_image() {
     local output_file="$OUTPUT_DIR/${name}-${width}.webp"
 
     mkdir -p "$cache_subdir"
+
+    # Track this file as used
+    echo "$cached_file" >> "$USED_FILES"
 
     # Check cache hit
     if [[ -f "$cached_file" ]]; then
@@ -51,6 +59,26 @@ convert_image() {
     rm -f "$tmp_file"
 }
 
+cleanup_unused() {
+    echo ""
+    echo "Cleaning up unused cache entries..."
+    local removed=0
+
+    # Find all webp files in cache
+    while IFS= read -r -d '' cached_file; do
+        if ! grep -qxF "$cached_file" "$USED_FILES"; then
+            echo "  [removing] $cached_file"
+            rm -f "$cached_file"
+            ((removed++)) || true
+        fi
+    done < <(find "$CACHE_DIR" -name "*.webp" -print0)
+
+    # Remove empty directories
+    find "$CACHE_DIR" -type d -empty -delete 2>/dev/null || true
+
+    echo "Removed $removed unused cache entries"
+}
+
 # Find all images
 shopt -s nullglob nocaseglob
 for src in "$INPUT_DIR"/*.{jpg,jpeg,png,tiff,gif}; do
@@ -60,5 +88,10 @@ for src in "$INPUT_DIR"/*.{jpg,jpeg,png,tiff,gif}; do
         convert_image "$src" "$width"
     done
 done
+
+# Cleanup old cache entries if requested (only on main branch)
+if [[ "$CLEANUP" == "true" ]]; then
+    cleanup_unused
+fi
 
 echo "Done!"
