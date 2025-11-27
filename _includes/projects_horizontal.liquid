@@ -3,7 +3,7 @@
     <div class="card h-100 hoverable" style="overflow: hidden;">
       <div class="row no-gutters h-100">
         {% if project.img %}
-          {% assign img_path = project.img | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+          {% assign img_path = project.img | remove: '.jpg' | remove: '.JPG' | remove: '.jpeg' | remove: '.JPEG' | remove: '.png' | remove: '.PNG' | remove: '.tiff' | remove: '.TIFF' | remove: '.gif' | remove: '.GIF' %}
           <div class="col-md-6">
             <picture>
               <source
