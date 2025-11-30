@@ -672,17 +672,15 @@ footer.sticky-bottom {
     }
   }
 
+  .container {
+    max-width: 800px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .card {
     img {
       width: 100%;
-    }
-  }
-
-  .project-thumbnail {
-    min-height: 300px;
-
-    @media (max-width: 767px) {
-      min-height: 180px;
     }
   }
 
