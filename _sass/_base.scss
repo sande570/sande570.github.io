@@ -678,6 +678,14 @@ footer.sticky-bottom {
     }
   }
 
+  .project-thumbnail {
+    min-height: 300px;
+
+    @media (max-width: 767px) {
+      min-height: 180px;
+    }
+  }
+
   .col {
     padding-bottom: 1rem;
   }
