@@ -672,10 +672,18 @@ footer.sticky-bottom {
     }
   }
 
-  .container {
-    max-width: 800px;
-    padding-left: 0;
-    padding-right: 0;
+  .masonry {
+    column-count: 1;
+    column-gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      column-count: 2;
+    }
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
   }
 
   .card {
