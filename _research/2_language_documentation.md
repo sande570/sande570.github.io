@@ -10,13 +10,13 @@ Much of my theoretical research relies on data collected through fieldwork abroa
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Fieldwork.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 1" caption="Serikpa Gnadja Emile and Hannah Sande" sizes="(min-width: 576px) 300px, 95vw" %}
+        {% include figure.liquid loading="eager" path="assets/img/Fieldwork.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="Serikpa Gnadja Emile and Hannah Sande" caption="Serikpa Gnadja Emile and Hannah Sande" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Gnagbodougnoa.JPG" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 2" caption="Gnagbodougnoa" sizes="(min-width: 576px) 300px, 95vw" %}
+        {% include figure.liquid loading="eager" path="assets/img/Gnagbodougnoa.JPG" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="Gnagbodougnoa, Côte d'Ivoire" caption="Gnagbodougnoa" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/FieldTeam.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="TODO: hover text 3" caption="Olivier, Katie Russell, Emile, and Hannah" sizes="(min-width: 576px) 300px, 95vw" %}
+        {% include figure.liquid loading="eager" path="assets/img/FieldTeam.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" title="Agodio Badiba Olivier, Katherine Russell, Serikpa Gnadja Emile, and Hannah Sande" caption="Olivier, Katie Russell, Emile, and Hannah" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
 </div>
 
