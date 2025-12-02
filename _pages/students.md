@@ -40,10 +40,9 @@ nav_order: 5
 </div>
 
 <div class="col-md-5">
-{% include figure.liquid loading="eager" path="assets/img/Students1.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 1" caption="TODO: caption text 1" sizes="(min-width: 768px) 450px, 95vw" %}
-{% include figure.liquid loading="eager" path="assets/img/Students2.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 2" caption="TODO: caption text 2" sizes="(min-width: 768px) 450px, 95vw" %}
-{% include figure.liquid loading="eager" path="assets/img/Students3.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 3" caption="TODO: caption text 3" sizes="(min-width: 768px) 450px, 95vw" %}
-{% include figure.liquid loading="eager" path="assets/img/Benin.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="TODO: hover text 4" caption="TODO: caption text 4" sizes="(min-width: 768px) 450px, 95vw" %}
+{% include figure.liquid loading="eager" path="assets/img/Students1.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="Allegra Robertson-Molinaro's graduation" caption="Allegra Robertson-Molinaro's graduation" sizes="(min-width: 768px) 450px, 95vw" %}
+{% include figure.liquid loading="eager" path="assets/img/Students3.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="Spring 2023 graduate morphology course" caption="Spring 2023 graduate morphology course" sizes="(min-width: 768px) 450px, 95vw" %}
+{% include figure.liquid loading="eager" path="assets/img/Benin.jpg" class="img-fluid rounded z-depth-1" figure-class="mb-3" title="Sande's morphophonology course at the African Linguistics School in Benin in 2022" caption="The ALS 2022 morphophonology course" sizes="(min-width: 768px) 450px, 95vw" %}
 </div>
 
 </div>
