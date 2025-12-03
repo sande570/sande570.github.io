@@ -1,22 +1,22 @@
 <div class="masonry-item">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card hoverable" style="overflow: hidden;">
-      <div class="row no-gutters">
+    <div class="card hoverable horizontal-card">
+      <div class="row no-gutters align-items-stretch">
         {% if project.img %}
           {% assign img_path = project.img | remove: '.jpg' | remove: '.JPG' | remove: '.jpeg' | remove: '.JPEG' | remove: '.png' | remove: '.PNG' | remove: '.tiff' | remove: '.TIFF' | remove: '.gif' | remove: '.GIF' %}
-          <div class="col-12">
+          <div class="col-12 col-md-6 card-img-left">
             <picture>
               <source
                 srcset="{{ img_path | relative_url }}-480.webp 480w, {{ img_path | relative_url }}-800.webp 800w"
                 type="image/webp"
-                sizes="(min-width: 768px) 420px, 100vw"
+                sizes="(min-width: 768px) 50vw, 100vw"
               >
-              <img src="{{ project.img | relative_url }}" alt="project thumbnail" class="img-fluid" style="width: 100%; box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 4px 12px rgba(0,0,0,0.15);">
+              <img src="{{ project.img | relative_url }}" alt="project thumbnail" class="img-fluid">
             </picture>
           </div>
         {% endif %}
-        <div class="col-12">
-          <div class="card-body">
+        <div class="col-12 {% if project.img %}col-md-6{% endif %}">
+          <div class="card-body d-flex flex-column justify-content-center h-100">
             <h3 class="card-title">{{ project.title }}</h3>
             <div class="row ml-1 mr-1 p-0">
               {% if project.github %}
