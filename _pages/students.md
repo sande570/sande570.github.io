@@ -18,8 +18,8 @@ nav_order: 5
 
 ## PhD Students - Past Committees
 
-- [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley, advisor)
-- [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley, advisor)
+- [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley, 2025, advisor)
+- [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley, 2025, advisor)
 - Emily Grabowski (Berkeley, 2024)
 - Tyler Lemon (Berkeley, 2024)
 - Christiana McGrady (Georgetown, 2023)
