@@ -256,6 +256,11 @@ ul.task-list input[type="checkbox"] {
       }
     }
   }
+
+  // Profile in header-profile-row uses grid sizing, not width
+  .header-profile-row .profile {
+    width: 100%;
+  }
 }
 
 .post-description {
