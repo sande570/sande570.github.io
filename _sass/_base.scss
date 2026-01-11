@@ -190,6 +190,28 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
+// Header-profile row for aligning photo with name
+.header-profile-row {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .post-header {
+      flex: 1;
+    }
+
+    .profile {
+      order: 1;
+      width: 30%;
+      flex-shrink: 0;
+    }
+  }
+}
+
 // Profile
 
 .profile {
