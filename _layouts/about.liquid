@@ -37,10 +37,11 @@ layout: default
         {% endif %}
       </div>
     {% endif %}
+
+    <div class="about-content">{{ content }}</div>
   </div>
 
   <article>
-    <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
