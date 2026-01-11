@@ -11,13 +11,13 @@ I am a linguistics faculty member at UC Berkeley, where I started in January 202
 
 <div class="row mt-4 mb-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/myfamily.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Siblings.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Berkeley.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/myfamily.jpg" class="img-fluid rounded z-depth-1" aspect-ratio="3/2" sizes="(min-width: 576px) 300px, 95vw" %}
     </div>
 </div>
 
