@@ -33,7 +33,7 @@ nav_order: 5
 
 ## Undergraduate Theses
 
-- Lindsay Hatch (Berkeley '25)
+- Lindsay Hatch (Berkeley '25, PhD stuent at UCLA)
 - Chelsea Tang (Berkeley '22, PhD student at MIT)
 - Katherine Russell (Georgetown '20, PhD student at UC Berkeley)
 
