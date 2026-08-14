@@ -11,13 +11,12 @@ nav_order: 5
 <div class="col-md-7" markdown="1">
 
 ## PhD Students - Current Advisees
-- [Katherine Russell](https://www.krrussell.com/) (Berkeley)
-- [Zachary Wellstood](https://zachwellstood.com/) (Berkeley)
 - [Becky Everson](https://rebeccaeverson.github.io/) (Berkeley)
 - [Alice Lee-Kleinberg](https://lx.berkeley.edu/people/alice-lee-kleinberg) (Berkeley)
 
 ## PhD Students - Past Committees
-
+- [Katherine Russell](https://www.krrussell.com/) (Berkeley, 2026, advisor)
+- [Zachary Wellstood](https://zachwellstood.com/) (Berkeley, 2026, advisor)
 - [Maksymilian Dabkowski](https://maksymilian-dabkowski.github.io/) (Berkeley, 2025, advisor)
 - [Allegra Robertson](https://sites.google.com/view/allegrarobertson) (Berkeley, 2025, advisor)
 - Emily Grabowski (Berkeley, 2024)
