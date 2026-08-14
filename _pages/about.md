@@ -27,7 +27,7 @@ latest_posts:
 
 I am an Associate Professor of Linguistics at UC Berkeley. I carry out documentary linguistic work, which is informed by and contributes to linguistic theory. Specifically, I investigate phonological processes and the interfaces of phonology with syntax and morphology.
 
-My research focuses on Kru languages, especially Guébie (Côte d'Ivoire). I have also worked with speakers of Atchan and Ga (Kwa, Ghana), Lobi (Gur/Mabia, Côte d'Ivoire), Nouchi (urban youth language, Côte d'Ivoire), Dafing (Mande, Burkina Faso), Amharic (Semitic, Ethiopia), Nobiin (Nilotic, Sudan), and Moro (Kordofanian, Sudan).
+My research focuses on Kru languages, especially Guébie (Côte d'Ivoire). I have also worked with speakers of Aïzi (family undetermined), Atchan and Ga (Kwa), Lobi (Gur/Mabia), Nouchi (urban youth language), Dafing (Mande), Amharic (Semitic), Nobiin (Nilotic), and Moro (Kordofanian).
 
 Here's a link to [Twisted Tongues](https://www.twisted-tongues.com/), a database management tool for fieldworkers.
 
