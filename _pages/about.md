@@ -32,3 +32,5 @@ My research focuses on Kru languages, especially Guébie (Côte d'Ivoire). I hav
 Here's a link to [Twisted Tongues](https://www.twisted-tongues.com/), a database management tool for fieldworkers.
 
 Here's a link to [the Guébie story corpus](https://ling170.hannahsande.com/), an in-progress interactive corpus of Guébie texts.
+
+Here's [the handout](/assets/pdf/Sande_handoutWECOL2026.pdf) for my plenary talk at WECOL on November 15, 2026
